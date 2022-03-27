@@ -5,7 +5,7 @@ input=$1
 awk '/\+91 */{print}' $input > step_2.txt
 
 # removing saved number.
-awk '!/Unknown/{print}' step_2.txt > step_3.txt
+awk '!/[A-Za-z]/{print}' step_2.txt > step_3.txt
 
 # remove spaces
 cat step_3.txt | sed -r 's/\s+//g' > step_4.txt
